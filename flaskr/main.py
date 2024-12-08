@@ -2,7 +2,6 @@ from flask import Flask
 from flask import url_for
 from flask import render_template
 
-from livereload import Server
 
 
 
@@ -26,7 +25,3 @@ def hello():
 def profile(username):
   return f'{username}\'s profile'
 
-# run through liverload
-if __name__ == '__main__':
-    server = Server(app.wsgi_app)
-    server.serve()
